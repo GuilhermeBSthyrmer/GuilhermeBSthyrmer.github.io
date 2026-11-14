@@ -1,0 +1,13 @@
+{
+  "name": "guilhermebsthyrmer.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tests/servidor.mjs",
+    "test": "playwright test",
+    "capturas": "node tools/capturas.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1"
+  }
+}
