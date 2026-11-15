@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://github.com; base-uri 'self'; form-action 'none'">
   <title>Guilherme · Portfólio</title>
-  <meta name="description" content="Sites e aplicações web feitos do zero, cada um com identidade própria, testados de ponta a ponta no desktop e no celular.">
+  <meta name="description" content="Sites, aplicações web e ferramentas de servidor feitos do zero, cada um com identidade própria e testado de ponta a ponta.">
   <meta property="og:title" content="Guilherme · Portfólio">
-  <meta property="og:description" content="Uma loja que funciona como radiola, um app de clima com a cor do céu, um controle de gastos e mais.">
+  <meta property="og:description" content="Uma loja que funciona como radiola, um app de clima com a cor do céu, um agente de segurança para Linux em Go e mais.">
   <meta property="og:image" content="https://guilhermebsthyrmer.github.io/img/agulha-discos-desktop.webp">
   <meta name="theme-color" content="#EDECE7">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -34,6 +34,7 @@ FORM: mesa de provas impressas.
     <a href="#trocado">Finanças</a>
     <a href="#balcao">Bot</a>
     <a href="#afiliado">Afiliados</a>
+    <a href="#agente">Linux</a>
   </nav>
 </header>
 
@@ -41,8 +42,8 @@ FORM: mesa de provas impressas.
   <section class="abertura" aria-labelledby="nome">
     <div class="abertura__texto">
       <h1 id="nome">Guilherme</h1>
-      <p class="abertura__frase">Sites e aplicações web feitos do zero, cada um com identidade própria e testado de ponta a ponta no desktop e no celular.</p>
-      <p class="abertura__pilha">HTML, CSS e JavaScript sem framework · Web Audio · Canvas · SVG · APIs públicas · Playwright · GitHub Actions</p>
+      <p class="abertura__frase">Sites, aplicações web e ferramentas de servidor feitos do zero, cada um com identidade própria e testado de ponta a ponta.</p>
+      <p class="abertura__pilha">HTML, CSS e JavaScript sem framework · Web Audio · Canvas · SVG · Go · Linux · mTLS · Playwright · GitHub Actions</p>
     </div>
     <div class="leque" aria-label="Os cinco projetos">
       <a class="prova prova--1" href="#agulha" aria-label="Agulha Discos"><img src="img/agulha-discos-desktop.webp" width="1440" height="900" alt="" fetchpriority="high"></a>
@@ -163,10 +164,32 @@ FORM: mesa de provas impressas.
         </figure>
       </div>
     </section>
+
+    <!-- AGENTE -->
+    <section class="faixa faixa--agente faixa--invertida" id="agente" aria-labelledby="t-agente">
+      <div class="faixa__in">
+        <div class="faixa__texto">
+          <p class="faixa__tipo">Segurança de servidores</p>
+          <h2 id="t-agente">agente-linux</h2>
+          <p class="faixa__linha">Um agente em Go que faz o check-up de segurança de servidores Linux e manda o resultado, por conexão autenticada dos dois lados, para um painel que mostra a frota inteira.</p>
+          <ul class="faixa__provas">
+            <li>11 verificações inspiradas no CIS, cada uma com o motivo e o arquivo e a linha de onde veio o valor.</li>
+            <li>mTLS com CA própria: a identidade da máquina vem do certificado, e quem tenta se passar por outra é marcado.</li>
+            <li>Empacotado como .deb com serviço systemd sem privilégios extras, e testado no Windows com máquinas falsas.</li>
+          </ul>
+          <p class="faixa__tags">Go · SQLite · mTLS · systemd · CI em Linux, Windows e macOS</p>
+          <p class="faixa__links"><a class="botao" href="https://github.com/GuilhermeBSthyrmer/agente-linux">Ver o código</a><a class="link" href="https://github.com/GuilhermeBSthyrmer/agente-linux/blob/main/examples/web-01.txt">Exemplo de relatório</a></p>
+        </div>
+        <figure class="telas">
+          <div class="janela"><img src="img/agente-linux-desktop.webp" width="1440" height="900" alt="Painel do agente mostrando a máquina web-01: verificações que falharam, como login do root e senha no SSH, com o motivo de cada uma" loading="lazy"></div>
+          <div class="celular"><img src="img/agente-linux-celular.webp" width="390" height="844" alt="O painel da frota no celular, com três máquinas e o resultado de cada verificação" loading="lazy"></div>
+        </figure>
+      </div>
+    </section>
   </div>
 
   <section class="metodo" aria-labelledby="t-metodo">
-    <h2 id="t-metodo">Em todos os projetos</h2>
+    <h2 id="t-metodo">Em todos os sites</h2>
     <dl class="metodo__lista">
       <div><dt>Sem framework, sem build</dt><dd>HTML, CSS e JavaScript lidos direto pelo navegador. Abre no GitHub Pages do jeito que está no repositório.</dd></div>
       <div><dt>Testes de ponta a ponta</dt><dd>Playwright roda cada cenário no desktop e no celular, com as APIs externas simuladas. 70 testes no total.</dd></div>

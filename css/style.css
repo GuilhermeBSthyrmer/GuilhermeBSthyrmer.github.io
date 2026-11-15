@@ -81,6 +81,8 @@ a { color: inherit; text-underline-offset: .22em; }
 .faixa--trocado { --fundo: #F7F6F2; --cor: #1C1B19; --cor-2: #55544F; --destaque: #A9471F; --sobre-destaque: #FFFFFF; }
 .faixa--balcao { --fundo: #1F3FBF; --cor: #FFFFFF; --cor-2: #DCE3FF; --destaque: #F5A9B8; --sobre-destaque: #1B1B2F; }
 .faixa--afiliado { --fundo: #FFD400; --cor: #141414; --cor-2: #3A3A3A; --destaque: #E30613; --sobre-destaque: #FFFFFF; }
+.faixa--agente { --fundo: #0E1712; --cor: #E8F3EC; --cor-2: #A8C4B2; --destaque: #4ADE80; --sobre-destaque: #052E14; }
+.faixa--agente h2 { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-weight: 700; letter-spacing: -.05em; }
 .faixa--trocado .janela { box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .35); }
 
 /* método */
